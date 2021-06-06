@@ -26,13 +26,13 @@ private:
 		char buffer;
 		struct {
 			bool          is_response		: 1;
-			bool          request_response	: 1;
+			bool          request_response		: 1;
 			bool          only_error		: 1;
 			bool          is_activity		: 1;
 			bool          has_tid			: 1;
 			bool          has_sid			: 1;
-			bool							: 1;
-			bool          extended_flags 	: 1;
+			bool					: 1;
+			bool          extended_flags		: 1;
 		};
 	}flags;
 	unsigned char tid;
