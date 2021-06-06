@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.6)
+project(sphero-parser)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+add_executable(sphero-parser sources/main.cpp sources/packet.hpp sources/packet.cpp)
