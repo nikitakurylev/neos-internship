@@ -26,10 +26,10 @@ Packet::Packet(vector<char> buffer) : tid(0), sid(0) {
 
 ostream& operator<<(ostream& os, const Packet& packet)
 {
-	if (packet.flags.is_response)
-		os << "Response Packet";
-	else
+	if (packet.flags.request_response)
 		os << "Request Packet";
+	else
+		os << "Response Packet";
 	os << " (flg: " << ByteToStr(packet.flags.buffer);
 	if (packet.flags.has_tid)
 		os << " tid: " << ByteToStr(packet.tid);
