@@ -56,6 +56,7 @@ int main(int argc, char* argv[])
 		cout << "pcap_loop() failed: " << pcap_geterr(descr);
 		return 1;
 	}
+	pcap_close(descr);
 
 	vector<Packet> packets = ReadPackets(g_buffer);
 
